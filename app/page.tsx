@@ -1,113 +1,301 @@
+import { Map, Ship, Users } from "lucide-react";
+
 import Image from "next/image";
+
+import Navbar from "@/components/Navbar";
+import WordRotate from "@/components/magicui/word-rotate";
+import NumberTicker from "@/components/magicui/number-ticker";
+import Marquee from "@/components/magicui/marquee";
+import TextReveal from "@/components/magicui/text-reveal";
+import { GlobeDemo } from "@/components/Globe3D";
+import { Footer } from "@/components/Footer";
+import { ThreeDCardDemo } from "@/components/CardDemo";
+import { ThreeDCardDemoTwo } from "@/components/CardTwo";
+import { ThreeDCardDemoThree } from "@/components/CardThree";
+import { TeamCard } from "@/components/TeamCard";
+import { ContactForm } from "@/components/Form";
+
+import fs from "fs";
+import DottedMap from "dotted-map";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
+const map = new DottedMap({
+  height: 60,
+  grid: "diagonal",
+  countries: ["PER"],
+});
+
+map.addPin({
+  lat: -4.5770783194849045,
+  lng: -81.27992381597724,
+  svgOptions: { color: "#d6ff79", radius: 0.4 },
+});
+map.addPin({
+  lat: 48.8534,
+  lng: 2.3488,
+  svgOptions: { color: "#1F1F1F", radius: 0.4 },
+});
+
+const svgMap = map.getSVG({
+  radius: 0.22,
+  color: "#1F1F1F",
+  shape: "hexagon",
+  backgroundColor: "#FFFFFF",
+});
+
+fs.writeFileSync("public/images/customMap.svg", svgMap);
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main>
+      <Navbar />
+      <div className="relative">
+        <video
+          src="/videos/videoShip.mp4"
+          autoPlay
+          loop
+          muted
+          className="w-screen h-[100vh] object-cover relative z-20"
+        />
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center space-y-4 lg:items-start lg:mx-auto lg:max-w-7xl px-8 z-40">
+          <h1 className="text-4xl lg:text-6xl font-medium tracking-wider text-white md:text-6xl">
+            Master Shipping
+          </h1>
+          <p className="text-xl text-white md:text-xl text-center lg:text-left">
+            Leading your shipping solutions <br />
+            for US & Latam.
+          </p>
+          <WordRotate
+            className="text-lg lg:text-xl font-normal bg-black rounded-lg px-4 py-2 text-white dark:text-black"
+            words={["Ship Broker", "Ship Agent", "Logistic Agent"]}
+          />
         </div>
       </div>
+      <div className="absolute top-0 w-full h-full bg-black/30 z-30" />
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
+      <div className="bg-white py-12 flex flex-col">
+        <h2 className="text-2xl font-bold text-slate-900 mx-auto max-w-7xl px-8 text-center md:text-left">
+          Our Business Lines
+        </h2>
+        <p className="text-lg text-[#999999] font-normal mx-auto max-w-7xl px-8 text-center md:text-left">
+          What we specialize on
+        </p>
+      </div>
+      <section className="mx-auto max-w-7xl px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center">
+        <ThreeDCardDemo />
+        <ThreeDCardDemoTwo />
+        <ThreeDCardDemoThree />
+      </section>
+
+      <section className="py-32 px-8 bg-slate-100">
+        <div className="flex flex-col text-center md:justify-start md:text-left space-y-1 mx-auto max-w-7xl">
+          <h2 className="text-2xl font-bold text-slate-900">
+            What we have achieved
+          </h2>
+          <p className="text-lg text-[#999999] font-normal">
+            Trusted by the industry worldwide
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3 mt-16 items-center mx-auto max-w-7xl">
+          <div className="bg-white w-auto h-44 rounded-lg flex flex-row space-x-10 justify-start items-center px-8 border border-muted">
+            <div className="rounded-lg h-24 w-24 bg-[#E0F2FE] flex items-center justify-center">
+              <Ship size={56} className="text-[#3B82F6]" />
+            </div>
+            <div className="flex flex-col">
+              <p className="text-2xl text-slate-900 font-bold">
+                <NumberTicker value={2011} />
+              </p>
+              <p className="font-medium text-[#999999] text-base">
+                our foundation
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-white w-auto h-44 rounded-lg flex flex-row space-x-10 justify-start items-center px-8 border border-muted">
+            <div className="rounded-lg h-24 w-24 bg-[#FEF3C7] flex items-center justify-center">
+              <Map size={56} className="text-[#EAB308]" />
+            </div>
+            <div className="flex flex-col">
+              <p className="text-2xl text-slate-900 font-bold">
+                + <NumberTicker value={5000} />
+              </p>
+              <p className="font-medium text-[#999999] text-base">
+                vessels attended
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-white w-auto h-44 rounded-lg flex flex-row space-x-10 justify-start items-center px-8 border border-muted">
+            <div className="rounded-lg h-24 w-24 bg-[#D1FAE5] flex items-center justify-center">
+              <Users size={56} className="text-[#059669]" />
+            </div>
+            <div className="flex flex-col">
+              <p className="text-2xl text-slate-900 font-bold">
+                + <NumberTicker value={100} />
+              </p>
+              <p className="font-medium text-[#999999] text-base">
+                partners trust us
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl mt-32 pt-32 mb-20 px-8">
+        <h2 className="text-2xl font-bold text-slate-900 text-center">
+          Trusted By
+        </h2>
+        <div className="relative mt-16">
+          <Marquee className="max-w-full [--duration:40s]" pauseOnHover>
+            {companies.map((logo, idx) => (
+              <Image
+                key={idx}
+                src={`/logo/${logo}.png`}
+                className="h-10 w-28 dark:brightness-0 dark:invert"
+                alt={logo}
+                width={1000}
+                height={1000}
+              />
+            ))}
+          </Marquee>
+          <div className="pointer-events-none absolute inset-y-0 left-0 h-full w-1/3 bg-gradient-to-r from-white dark:from-black"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 h-full w-1/3 bg-gradient-to-l from-white dark:from-black"></div>
+        </div>
+      </section>
+
+      <div className="w-full">
+        <TextReveal text="Our direct coverage includes all the ports in Ecuador and Perú while our sub-agency network allows us to expand our services upto the rest of The Americas. Our direct coverage includes all the ports in Ecuador and Perú while our sub-agency network allows us to expand our services upto the rest of The Americas." />
+      </div>
+
+      <section className="mx-auto max-w-7xl mb-28 px-8 flex flex-col md:flex-row items-center justify-center">
+        <div className="flex flex-col text-center md:justify-start md:text-left space-y-1">
+          <h2 className="text-4xl font-bold text-slate-900">
+            International Coverage
+          </h2>
+          <p className="text-xl text-[#999999] font-normal">Where we operate</p>
+        </div>
+        <GlobeDemo />
+      </section>
+
+      <section className="px-28 mt-20 grid grid-cols-1 lg:grid-cols-2 gap-10">
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          src="/images/customMap.svg"
+          alt="Custom Map"
+          width={1000}
+          height={1000}
+          className="w-full object-contain max-h-[32rem]"
         />
-      </div>
+        <div className="">
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="item-1">
+              <AccordionTrigger>Talara</AccordionTrigger>
+              <AccordionContent>
+                Puerto del Perú, ubicado en la costa norte del país, en la
+                región Piura. Es el puerto más importante de la región y uno de
+                los más importantes del país.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-2">
+              <AccordionTrigger>Paita</AccordionTrigger>
+              <AccordionContent>
+                Puerto del Perú, ubicado en la costa norte del país, en la
+                región Piura. Es el puerto más importante de la región y uno de
+                los más importantes del país.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-3">
+              <AccordionTrigger>Bayovar</AccordionTrigger>
+              <AccordionContent>
+                Puerto del Perú, ubicado en la costa norte del país, en la
+                región Piura. Es el puerto más importante de la región y uno de
+                los más importantes del país.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-4">
+              <AccordionTrigger>Salaverry</AccordionTrigger>
+              <AccordionContent>
+                Puerto del Perú, ubicado en la costa norte del país, en la
+                región Piura. Es el puerto más importante de la región y uno de
+                los más importantes del país.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-5">
+              <AccordionTrigger>Chimbote</AccordionTrigger>
+              <AccordionContent>
+                Puerto del Perú, ubicado en la costa norte del país, en la
+                región Piura. Es el puerto más importante de la región y uno de
+                los más importantes del país.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-6">
+              <AccordionTrigger>Callao</AccordionTrigger>
+              <AccordionContent>
+                Puerto del Perú, ubicado en la costa norte del país, en la
+                región Piura. Es el puerto más importante de la región y uno de
+                los más importantes del país.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </section>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
+      <section className="mx-auto max-w-7xl my-44 px-8">
+        <div className="flex flex-col text-center md:justify-start md:text-left space-y-1">
+          <h2 className="text-2xl font-bold text-slate-900">Our Team</h2>
+          <p className="text-lg text-[#999999] font-normal">
+            The ones who make it possible
           </p>
-        </a>
+        </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <TeamCard
+            name="Jose Paz"
+            role="Chief Executive Officer"
+            img="/images/profPic1.jpg"
+            linkedin="https://www.linkedin.com/in/maria-alejandra-paz-076b28161/"
+            mail="map@mastershipping.com.pe"
+            body="Dear%20Jose%20Paz%0A%0AI'm%20interested%20in"
+          />
+          <TeamCard
+            name="Maria Alejandra Paz"
+            role="General Manager"
+            img="/images/profPic2.jpg"
+            linkedin="https://www.linkedin.com/in/maria-alejandra-paz-076b28161/"
+            mail="map@mastershipping.com.pe"
+            body="Dear%20Jose%20Paz%0A%0AI'm%20interested%20in"
+          />
+          <TeamCard
+            name="Ana Lucia Paz"
+            role="General Manager"
+            img="/images/profPic2.jpg"
+            linkedin="https://www.linkedin.com/in/maria-alejandra-paz-076b28161/"
+            mail="map@mastershipping.com.pe"
+            body="Dear%20Jose%20Paz%0A%0AI'm%20interested%20in"
+          />
+          <TeamCard
+            name="Kattina"
+            role="General Manager"
+            img="/images/profPic1.jpg"
+            linkedin="https://www.linkedin.com/in/maria-alejandra-paz-076b28161/"
+            mail="map@mastershipping.com.pe"
+            body="Dear%20Jose%20Paz%0A%0AI'm%20interested%20in"
+          />
+        </div>
+      </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+      <section className="mx-auto max-w-7xl px-8 mt-44 mb-32">
+        <ContactForm />
+      </section>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <Footer />
     </main>
   );
 }
+
+const companies = ["hafnia", "glencore", "alicorp"];
