@@ -13,9 +13,20 @@ type Props = {
   role: string;
   img: string;
   body: string;
+  credentials: string;
+  joined: string;
 };
 
-export const TeamCard = ({ name, linkedin, mail, role, img, body }: Props) => {
+export const TeamCard = ({
+  name,
+  linkedin,
+  mail,
+  role,
+  img,
+  body,
+  credentials,
+  joined,
+}: Props) => {
   return (
     <div className="flex flex-col space-y-4 lg:flex-row lg:space-y-0 lg:space-x-4 max-w-xl lg:h-80">
       <Image
@@ -28,12 +39,13 @@ export const TeamCard = ({ name, linkedin, mail, role, img, body }: Props) => {
 
       <div className="flex flex-col justify-between w-full h-full max-w-48">
         <div>
-          <div className="flex flex-col space-y-1">
+          <div className="flex flex-col">
             <p className="font-medium text-xl">{name}</p>
             <p className="font-normal tracking-tight text-sm text-[#999999]">
               {role}
             </p>
           </div>
+          <p className="mt-2 text-muted-foreground">{credentials}</p>
 
           {/* linkedin and mail */}
           <div className="flex flex-row space-x-3 mt-6">
@@ -47,6 +59,7 @@ export const TeamCard = ({ name, linkedin, mail, role, img, body }: Props) => {
         </div>
 
         <div className="flex flex-col mt-12 lg:mt-0">
+          <p className="text-xs text-[#999999] mb-1.5">{joined}</p>
           <Dialog>
             <DialogTrigger asChild>
               <Button size={"sm"} variant={"outline"}>
@@ -66,9 +79,17 @@ export const TeamCard = ({ name, linkedin, mail, role, img, body }: Props) => {
                 <div className="mt-8">
                   <div className="flex flex-col space-y-1">
                     <p className="font-medium text-xl">{name}</p>
-                    <p className="font-normal tracking-tight text-sm text-[#999999]">
-                      {role}
-                    </p>
+                    <div className="flex flex-row space-x-2 items-center">
+                      <p className="font-normal tracking-tight text-sm text-[#999999]">
+                        {role}
+                      </p>
+                      <span className="font-normal tracking-tight text-sm text-[#999999]">
+                        -
+                      </span>
+                      <p className="font-normal tracking-tight text-sm text-[#999999]">
+                        {credentials}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>

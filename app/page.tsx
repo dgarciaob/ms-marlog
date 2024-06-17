@@ -14,20 +14,16 @@ import { ThreeDCardDemoTwo } from "@/components/CardTwo";
 import { ThreeDCardDemoThree } from "@/components/CardThree";
 import { TeamCard } from "@/components/TeamCard";
 import { ContactForm } from "@/components/Form";
+import Coverage from "@/components/Coverage";
 
 import fs from "fs";
 import DottedMap from "dotted-map";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import Note from "@/components/Note";
 
 const map = new DottedMap({
   height: 60,
   grid: "diagonal",
-  countries: ["PER"],
+  countries: ["PAN"],
 });
 
 map.addPin({
@@ -48,7 +44,7 @@ const svgMap = map.getSVG({
   backgroundColor: "#FFFFFF",
 });
 
-fs.writeFileSync("public/images/customMap.svg", svgMap);
+fs.writeFileSync("public/images/customMapPanama.svg", svgMap);
 
 export default function Home() {
   return (
@@ -78,7 +74,7 @@ export default function Home() {
       </div>
       <div className="absolute top-0 w-full h-full bg-black/30 z-30" />
 
-      <div className="bg-white py-12 flex flex-col">
+      <div className="bg-white py-12 flex flex-col" id="businessLines">
         <h2 className="text-2xl font-bold text-slate-900 mx-auto max-w-7xl px-8 text-center md:text-left">
           Our Business Lines
         </h2>
@@ -90,6 +86,16 @@ export default function Home() {
         <ThreeDCardDemo />
         <ThreeDCardDemoTwo />
         <ThreeDCardDemoThree />
+      </section>
+
+      <section className="mx-auto max-w-7xl px-8 my-32" id="about">
+        <div className="flex flex-col text-center md:justify-start md:text-left space-y-1 mb-8">
+          <h2 className="text-2xl font-bold text-slate-900">About us</h2>
+          <p className="text-lg text-[#999999] font-normal">
+            A note from our President & CEO
+          </p>
+        </div>
+        <Note />
       </section>
 
       <section className="py-32 px-8 bg-slate-100">
@@ -173,7 +179,10 @@ export default function Home() {
         <TextReveal text="Our direct coverage includes all the ports in Ecuador and Perú while our sub-agency network allows us to expand our services upto the rest of The Americas. Our direct coverage includes all the ports in Ecuador and Perú while our sub-agency network allows us to expand our services upto the rest of The Americas." />
       </div>
 
-      <section className="mx-auto max-w-7xl mb-28 px-8 flex flex-col md:flex-row items-center justify-center">
+      <section
+        className="mx-auto max-w-7xl mb-28 px-8 flex flex-col md:flex-row items-center justify-center"
+        id="mainPorts"
+      >
         <div className="flex flex-col text-center md:justify-start md:text-left space-y-1">
           <h2 className="text-4xl font-bold text-slate-900">
             International Coverage
@@ -183,69 +192,9 @@ export default function Home() {
         <GlobeDemo />
       </section>
 
-      <section className="px-28 mt-20 grid grid-cols-1 lg:grid-cols-2 gap-10">
-        <Image
-          src="/images/customMap.svg"
-          alt="Custom Map"
-          width={1000}
-          height={1000}
-          className="w-full object-contain max-h-[32rem]"
-        />
-        <div className="">
-          <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="item-1">
-              <AccordionTrigger>Talara</AccordionTrigger>
-              <AccordionContent>
-                Puerto del Perú, ubicado en la costa norte del país, en la
-                región Piura. Es el puerto más importante de la región y uno de
-                los más importantes del país.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-2">
-              <AccordionTrigger>Paita</AccordionTrigger>
-              <AccordionContent>
-                Puerto del Perú, ubicado en la costa norte del país, en la
-                región Piura. Es el puerto más importante de la región y uno de
-                los más importantes del país.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-3">
-              <AccordionTrigger>Bayovar</AccordionTrigger>
-              <AccordionContent>
-                Puerto del Perú, ubicado en la costa norte del país, en la
-                región Piura. Es el puerto más importante de la región y uno de
-                los más importantes del país.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-4">
-              <AccordionTrigger>Salaverry</AccordionTrigger>
-              <AccordionContent>
-                Puerto del Perú, ubicado en la costa norte del país, en la
-                región Piura. Es el puerto más importante de la región y uno de
-                los más importantes del país.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-5">
-              <AccordionTrigger>Chimbote</AccordionTrigger>
-              <AccordionContent>
-                Puerto del Perú, ubicado en la costa norte del país, en la
-                región Piura. Es el puerto más importante de la región y uno de
-                los más importantes del país.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-6">
-              <AccordionTrigger>Callao</AccordionTrigger>
-              <AccordionContent>
-                Puerto del Perú, ubicado en la costa norte del país, en la
-                región Piura. Es el puerto más importante de la región y uno de
-                los más importantes del país.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-        </div>
-      </section>
+      <Coverage />
 
-      <section className="mx-auto max-w-7xl my-44 px-8">
+      <section className="mx-auto max-w-7xl my-44 px-8" id="team">
         <div className="flex flex-col text-center md:justify-start md:text-left space-y-1">
           <h2 className="text-2xl font-bold text-slate-900">Our Team</h2>
           <p className="text-lg text-[#999999] font-normal">
@@ -255,41 +204,49 @@ export default function Home() {
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <TeamCard
-            name="Jose Paz"
-            role="Chief Executive Officer"
+            name="Jose A. Paz"
+            role="President & CEO"
             img="/images/profPic1.jpg"
             linkedin="https://www.linkedin.com/in/maria-alejandra-paz-076b28161/"
             mail="map@mastershipping.com.pe"
             body="Dear%20Jose%20Paz%0A%0AI'm%20interested%20in"
+            credentials="MBA, BSC, MERCHANT MARINE"
+            joined="Joined industry in 1991"
           />
           <TeamCard
-            name="Maria Alejandra Paz"
-            role="General Manager"
+            name="Maria A. Paz"
+            role="LATAM Manager"
             img="/images/profPic2.jpg"
             linkedin="https://www.linkedin.com/in/maria-alejandra-paz-076b28161/"
             mail="map@mastershipping.com.pe"
             body="Dear%20Jose%20Paz%0A%0AI'm%20interested%20in"
+            credentials="BSC, BUSINESS ADMINISTRATOR"
+            joined="Joined industry in 2020"
           />
           <TeamCard
-            name="Ana Lucia Paz"
-            role="General Manager"
+            name="Ana L. Paz"
+            role="Marketing Executive"
             img="/images/profPic2.jpg"
             linkedin="https://www.linkedin.com/in/maria-alejandra-paz-076b28161/"
             mail="map@mastershipping.com.pe"
             body="Dear%20Jose%20Paz%0A%0AI'm%20interested%20in"
+            credentials="BSC, MARKETING"
+            joined="Joined industry 2022"
           />
           <TeamCard
-            name="Kattina"
-            role="General Manager"
+            name="Kattina Perez Garatea"
+            role="ADM/OPS Executive"
             img="/images/profPic1.jpg"
             linkedin="https://www.linkedin.com/in/maria-alejandra-paz-076b28161/"
             mail="map@mastershipping.com.pe"
             body="Dear%20Jose%20Paz%0A%0AI'm%20interested%20in"
+            credentials="BSC, ECONOMICS"
+            joined="Joined industry in 2024"
           />
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-8 mt-44 mb-32">
+      <section className="mx-auto max-w-7xl px-8 mt-44 mb-32" id="contact">
         <ContactForm />
       </section>
 

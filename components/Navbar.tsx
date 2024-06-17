@@ -32,7 +32,7 @@ export default function Navbar() {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <Link href="#" className="-m-1.5 p-1.5">
+          <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Master Shipping</span>
             <Image
               className="h-8 w-auto"
@@ -54,74 +54,26 @@ export default function Navbar() {
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          {/* <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-slate-50">
-              Business Lines
-              <ChevronDownIcon
-                className="h-5 w-5 flex-none text-slate-50"
-                aria-hidden="true"
-              />
-            </PopoverButton>
-
-            <Transition
-              as={Fragment}
-              enter="transition ease-out duration-200"
-              enterFrom="opacity-0 translate-y-1"
-              enterTo="opacity-100 translate-y-0"
-              leave="transition ease-in duration-150"
-              leaveFrom="opacity-100 translate-y-0"
-              leaveTo="opacity-0 translate-y-1"
-            >
-              <PopoverPanel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
-                <div className="p-4">
-                  {products.map((item) => (
-                    <div
-                      key={item.name}
-                      className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
-                    >
-                      <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                        <item.icon
-                          className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
-                          aria-hidden="true"
-                        />
-                      </div>
-                      <div className="flex-auto">
-                        <Link
-                          href={item.href}
-                          className="block font-semibold text-gray-900"
-                        >
-                          {item.name}
-                          <span className="absolute inset-0" />
-                        </Link>
-                        <p className="mt-1 text-gray-600">{item.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </PopoverPanel>
-            </Transition>
-          </Popover> */}
-
           <Link
-            href="#"
+            href="#businessLines"
             className="text-sm font-semibold leading-6 text-slate-50"
           >
             Business Lines
           </Link>
           <Link
-            href="#"
+            href="#mainPorts"
             className="text-sm font-semibold leading-6 text-slate-50"
           >
             Main Ports
           </Link>
           <Link
-            href="#"
+            href="#team"
             className="text-sm font-semibold leading-6 text-slate-50"
           >
             Our Team
           </Link>
           <Link
-            href="#"
+            href="#about"
             className="text-sm font-semibold leading-6 text-slate-50"
           >
             About Us
@@ -129,7 +81,7 @@ export default function Navbar() {
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Link
-            href="#"
+            href="#contact"
             className="text-sm font-semibold leading-6 text-slate-50 hover:translate-x-2 transition-all duration-200"
           >
             Contact Us

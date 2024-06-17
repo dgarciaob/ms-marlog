@@ -10,15 +10,15 @@ const footerNavs = [
     label: "Business Lines",
     items: [
       {
-        href: "#/services",
+        href: "#/businessLines",
         name: "Ship Brokers",
       },
       {
-        href: "#/services",
+        href: "#/businessLines",
         name: "Ship Agents",
       },
       {
-        href: "#/services",
+        href: "#/businessLines",
         name: "Logistic Agents",
       },
       {
@@ -35,7 +35,7 @@ const footerNavs = [
         name: "About Us",
       },
       {
-        href: "#/footer",
+        href: "#/team",
         name: "Our Team",
       },
       {
@@ -81,7 +81,7 @@ export function Footer() {
                   Contact Us for any enquires or support. We are here to help.
                 </p>
                 <Link
-                  href="/signup"
+                  href="#contact"
                   className={cn(
                     buttonVariants({
                       size: "lg",
