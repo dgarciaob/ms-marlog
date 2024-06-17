@@ -48,7 +48,7 @@ const Note = () => {
           />
         </div>
       </CardContent>
-      <CardFooter className="flex flex-col items-start">
+      <CardFooter className="flex flex-col items-start text-sm">
         <p>Sincerely,</p>
         <p className="font-semibold">
           Jose A. Paz (JAP) <br />

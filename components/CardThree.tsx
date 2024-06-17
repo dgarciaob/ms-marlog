@@ -53,7 +53,7 @@ export function ThreeDCardDemoThree() {
               for moving bulk liquid cargoes in containers.
             </p>
 
-            <div className="mt-8 flex flex-col space-y-4">
+            <div className="mt-8 flex flex-col space-y-6">
               <p>
                 <strong>- Shippers or Consignees:</strong> Freight Forwarding
                 LCL & FCL, Inland logistics, Customs broking, Cargo insurance,
@@ -111,7 +111,7 @@ export function ThreeDCardDemoThree() {
             for moving bulk liquid cargoes in containers.
           </p>
 
-          <div className="mt-8 flex flex-col space-y-4">
+          <div className="mt-8 flex flex-col space-y-6">
             <p>
               <strong>- Shippers or Consignees:</strong> Freight Forwarding LCL
               & FCL, Inland logistics, Customs broking, Cargo insurance, Cargo

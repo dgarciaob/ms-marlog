@@ -1,4 +1,4 @@
-import { Map, Ship, Users } from "lucide-react";
+import { Anchor, Container, Map, MapPinIcon, Ship, Users } from "lucide-react";
 
 import Image from "next/image";
 
@@ -19,6 +19,9 @@ import Coverage from "@/components/Coverage";
 import fs from "fs";
 import DottedMap from "dotted-map";
 import Note from "@/components/Note";
+import AlternateTimeline from "@/components/Timeline";
+import EducationTimeline from "@/components/Timeline";
+import Timeline from "@/components/Timeline";
 
 const map = new DottedMap({
   height: 60,
@@ -108,45 +111,78 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3 mt-16 items-center mx-auto max-w-7xl">
-          <div className="bg-white w-auto h-44 rounded-lg flex flex-row space-x-10 justify-start items-center px-8 border border-muted">
+        <div className="mx-auto max-w-7xl mt-16">
+          <Timeline />
+        </div>
+
+        <div className="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3 mt-8 items-center mx-auto max-w-7xl">
+          {/* <div className="bg-[#FAFAFA] w-auto h-44 rounded-lg flex flex-col gap-y-2 items-center p-5 border border-muted">
+            <p className="text-xl text-slate-900 font-bold">
+              World-wide offices
+            </p>
+            <div className="flex flex-col space-y-1 text-sm mt-2">
+              <div className="flex flex-row items-center space-x-2">
+                <div className="flex flex-row items-center">
+                  <MapPinIcon size={24} className="text-[#3B82F6] mr-2" />
+                  <p>2011</p>
+                </div>
+                <span className="">Lima, Perú 🇵🇪</span>
+              </div>
+              <div className="flex flex-row items-center space-x-2">
+                <div className="flex flex-row items-center">
+                  <MapPinIcon size={24} className="text-[#3B82F6] mr-2" />
+                  <p>2019</p>
+                </div>
+                <span className="">Guayaquil, Ecuador 🇪🇨</span>
+              </div>
+              <div className="flex flex-row items-center space-x-2">
+                <div className="flex flex-row items-center">
+                  <MapPinIcon size={24} className="text-[#3B82F6] mr-2" />
+                  <p>2021</p>
+                </div>
+                <span className="">Atlanta, USA 🇺🇸</span>
+              </div>
+            </div>
+          </div> */}
+
+          <div className="bg-[#FAFAFA] w-auto h-44 rounded-lg flex flex-row space-x-10 justify-start items-center px-8 border border-muted">
             <div className="rounded-lg h-24 w-24 bg-[#E0F2FE] flex items-center justify-center">
-              <Ship size={56} className="text-[#3B82F6]" />
+              <Anchor size={56} className="text-[#3B82F6]" />
             </div>
             <div className="flex flex-col">
               <p className="text-2xl text-slate-900 font-bold">
-                <NumberTicker value={2011} />
+                <NumberTicker value={5000} />
               </p>
               <p className="font-medium text-[#999999] text-base">
-                our foundation
+                port calls attended
               </p>
             </div>
           </div>
 
-          <div className="bg-white w-auto h-44 rounded-lg flex flex-row space-x-10 justify-start items-center px-8 border border-muted">
+          <div className="bg-[#FAFAFA] w-auto h-44 rounded-lg flex flex-row space-x-10 justify-start items-center px-8 border border-muted">
             <div className="rounded-lg h-24 w-24 bg-[#FEF3C7] flex items-center justify-center">
-              <Map size={56} className="text-[#EAB308]" />
+              <Container size={56} className="text-[#EAB308]" />
             </div>
             <div className="flex flex-col">
               <p className="text-2xl text-slate-900 font-bold">
-                + <NumberTicker value={5000} />
+                + <NumberTicker value={4000} />
               </p>
               <p className="font-medium text-[#999999] text-base">
-                vessels attended
+                container moves
               </p>
             </div>
           </div>
 
-          <div className="bg-white w-auto h-44 rounded-lg flex flex-row space-x-10 justify-start items-center px-8 border border-muted">
+          <div className="bg-[#FAFAFA] w-auto h-44 rounded-lg flex flex-row space-x-10 justify-start items-center px-8 border border-muted">
             <div className="rounded-lg h-24 w-24 bg-[#D1FAE5] flex items-center justify-center">
-              <Users size={56} className="text-[#059669]" />
+              <Ship size={56} className="text-[#059669]" />
             </div>
             <div className="flex flex-col">
               <p className="text-2xl text-slate-900 font-bold">
-                + <NumberTicker value={100} />
+                + <NumberTicker value={200} />K
               </p>
               <p className="font-medium text-[#999999] text-base">
-                partners trust us
+                Bulk cargo moves
               </p>
             </div>
           </div>

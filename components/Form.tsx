@@ -78,7 +78,7 @@ export const ContactForm = () => {
             Let&apos;s Work Together
           </h2>
           <p className="text-lg text-[#999999] font-normal">
-            The ones who make it possible
+            Contact us for more information
           </p>
         </div>
 

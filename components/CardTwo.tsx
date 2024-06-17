@@ -53,7 +53,7 @@ export function ThreeDCardDemoTwo() {
               value to customers.
             </p>
 
-            <div className="mt-8 flex flex-col space-y-4">
+            <div className="mt-8 flex flex-col space-y-6">
               <p>
                 <strong>- Commercial ship agency:</strong> Port operations
                 support including STS, document drafting and forwarding.

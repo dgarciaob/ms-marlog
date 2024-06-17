@@ -55,7 +55,7 @@ export function ThreeDCardDemo() {
               risk management adhered to.
             </p>
 
-            <div className="mt-8 flex flex-col space-y-4">
+            <div className="mt-8 flex flex-col space-y-6">
               <p>
                 <strong>- Ship owners:</strong> Crude Oil tankers, Product
                 tankers, Chemical Tankers, Parcel Tankers.
@@ -112,7 +112,7 @@ export function ThreeDCardDemo() {
             management adhered to.
           </p>
 
-          <div className="mt-8 flex flex-col space-y-4">
+          <div className="mt-8 flex flex-col space-y-6">
             <p>
               <strong>- Ship owners:</strong> Crude Oil tankers, Product
               tankers, Chemical Tankers, Parcel Tankers.
