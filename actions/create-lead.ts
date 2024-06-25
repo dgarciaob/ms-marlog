@@ -1,3 +1,5 @@
+"use server";
+
 import { businessLine } from "@prisma/client";
 import { db } from "@/lib/db";
 

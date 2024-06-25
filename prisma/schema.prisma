@@ -17,7 +17,7 @@ datasource db {
 model Lead {
   id        String   @id @default(cuid())
   name      String
-  email     String   @unique
+  email     String   
   phone     String
   company   String
   businessLine businessLine
