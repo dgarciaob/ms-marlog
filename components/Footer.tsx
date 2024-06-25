@@ -107,7 +107,7 @@ export function Footer() {
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className="group inline-flex cursor-pointer items-center justify-start gap-1 text-gray-400 duration-200 hover:text-gray-600 hover:opacity-90 dark:text-gray-400 dark:hover:text-gray-200"
+                        className="group inline-flex cursor-pointer items-center justify-start gap-1 text-gray-400 duration-200 hover:text-white hover:opacity-90 dark:text-gray-400 dark:hover:text-gray-200"
                       >
                         {item.name}
                         <ChevronRight className="h-4 w-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100" />
@@ -127,7 +127,7 @@ export function Footer() {
                 key={social.name}
                 href={social.href}
                 target="_blank"
-                className="fill-gray-500 text-gray-500 hover:fill-gray-900 hover:text-gray-900 dark:hover:fill-gray-600 dark:hover:text-gray-600"
+                className="fill-slate-500 text-slate-500 hover:fill-white hover:text-white dark:hover:fill-gray-600 dark:hover:text-gray-600 transition-all duration-200"
               >
                 {social.icon}
                 <span className="sr-only">{social.name}</span>
