@@ -1,4 +1,4 @@
-import { Anchor, Container, Map, MapPinIcon, Ship, Users } from "lucide-react";
+import { Anchor, Container, Ship } from "lucide-react";
 
 import Image from "next/image";
 
@@ -18,9 +18,8 @@ import Coverage from "@/components/Coverage";
 
 import fs from "fs";
 import DottedMap from "dotted-map";
+
 import Note from "@/components/Note";
-import AlternateTimeline from "@/components/Timeline";
-import EducationTimeline from "@/components/Timeline";
 import Timeline from "@/components/Timeline";
 
 const map = new DottedMap({
