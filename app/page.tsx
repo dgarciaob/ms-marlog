@@ -2,7 +2,6 @@ import { Anchor, Container, Ship } from "lucide-react";
 
 import Image from "next/image";
 
-import Navbar from "@/components/Navbar";
 import WordRotate from "@/components/magicui/word-rotate";
 import NumberTicker from "@/components/magicui/number-ticker";
 import Marquee from "@/components/magicui/marquee";
@@ -10,6 +9,7 @@ import TextReveal from "@/components/magicui/text-reveal";
 import Coverage from "@/components/Coverage";
 import Note from "@/components/Note";
 import Timeline from "@/components/Timeline";
+import Navigation from "@/components/Navigation";
 
 import { GlobeDemo } from "@/components/Globe3D";
 import { Footer } from "@/components/Footer";
@@ -51,7 +51,7 @@ fs.writeFileSync("public/images/customMapPanama.svg", svgMap);
 export default function Home() {
   return (
     <main>
-      <Navbar />
+      <Navigation />
       <div className="relative">
         <video
           src="/videos/videoShip.mp4"

@@ -19,7 +19,7 @@ const Note = () => {
           </div>
         </CardTitle>
       </CardHeader>
-      <CardContent className="flex flex-row items-center gap-x-28">
+      <CardContent className="lg:flex lg:flex-row flex flex-col items-center lg:gap-x-28 lg:gap-y-0 gap-y-10">
         <div className="flex flex-col max-w-xl text-sm gap-y-6 text-muted-foreground leading-relaxed">
           <p>
             Since 2011 Master Shipping corporation is engaged in the shipping
@@ -38,7 +38,7 @@ const Note = () => {
           </p>
           <p>Thanks for letting us show you a different service experience</p>
         </div>
-        <div className="flex items-center justify-center w-1/3">
+        <div className="flex items-center justify-center lg:w-1/3 w-full">
           <Image
             src={"/images/profPic1.jpg"}
             alt="Jose A. Paz"
