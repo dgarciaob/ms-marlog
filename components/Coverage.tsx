@@ -34,7 +34,7 @@ const Coverage = () => {
   };
 
   return (
-    <section className="px-28 mt-20">
+    <section className="px-8 mt-0 lg:px-28 lg:mt-20">
       <Select onValueChange={setSelectedCountry}>
         <SelectTrigger className="w-[180px] mb-8">
           <SelectValue placeholder="Select a Country" />

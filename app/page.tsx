@@ -194,12 +194,12 @@ export default function Home() {
           Trusted By
         </h2>
         <div className="relative mt-16">
-          <Marquee className="max-w-full [--duration:40s]" pauseOnHover>
+          <Marquee className="max-w-full [--duration:15s]" pauseOnHover>
             {companies.map((logo, idx) => (
               <Image
                 key={idx}
                 src={`/logo/${logo}.png`}
-                className="h-10 w-28 dark:brightness-0 dark:invert"
+                className="h-12 w-28 dark:brightness-0 dark:invert"
                 alt={logo}
                 width={1000}
                 height={1000}
@@ -238,13 +238,13 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-20 lg:gap-10 items-center">
           <TeamCard
             name="Jose A. Paz"
             role="President & CEO"
             img="/images/profPic1.jpg"
-            linkedin="https://www.linkedin.com/in/maria-alejandra-paz-076b28161/"
-            mail="map@mastershipping.com.pe"
+            linkedin="https://www.linkedin.com/in/jose-antonio-paz-zanabria-72654121/"
+            mail="jap@mastershipping.com.pe"
             body="Dear%20Jose%20Paz%0A%0AI'm%20interested%20in"
             credentials="MBA, BSC, MERCHANT MARINE"
             joined="Joined industry in 1991"
@@ -255,7 +255,7 @@ export default function Home() {
             img="/images/profPic2.jpg"
             linkedin="https://www.linkedin.com/in/maria-alejandra-paz-076b28161/"
             mail="map@mastershipping.com.pe"
-            body="Dear%20Jose%20Paz%0A%0AI'm%20interested%20in"
+            body="Dear%20Maria%20Alejandra%20Paz%0A%0AI'm%20interested%20in"
             credentials="BSC, BUSINESS ADMINISTRATOR"
             joined="Joined industry in 2020"
           />
@@ -263,9 +263,9 @@ export default function Home() {
             name="Ana L. Paz"
             role="Marketing Executive"
             img="/images/profPic2.jpg"
-            linkedin="https://www.linkedin.com/in/maria-alejandra-paz-076b28161/"
-            mail="map@mastershipping.com.pe"
-            body="Dear%20Jose%20Paz%0A%0AI'm%20interested%20in"
+            linkedin="https://www.linkedin.com/in/ana-lucía-paz-b3939b223/"
+            mail="accounts@mastershipping.com.pe"
+            body="Dear%20Ana%20Lucia%20Paz%0A%0AI'm%20interested%20in"
             credentials="BSC, MARKETING"
             joined="Joined industry 2022"
           />
@@ -273,9 +273,9 @@ export default function Home() {
             name="Kattina Perez Garatea"
             role="ADM/OPS Executive"
             img="/images/profPic1.jpg"
-            linkedin="https://www.linkedin.com/in/maria-alejandra-paz-076b28161/"
-            mail="map@mastershipping.com.pe"
-            body="Dear%20Jose%20Paz%0A%0AI'm%20interested%20in"
+            linkedin="https://www.linkedin.com/in/kattinapérezgaratea/"
+            mail="kpg@mastershipping.com.pe"
+            body="Dear%20Kattina%20Perez%0A%0AI'm%20interested%20in"
             credentials="BSC, ECONOMICS"
             joined="Joined industry in 2024"
           />
@@ -291,4 +291,4 @@ export default function Home() {
   );
 }
 
-const companies = ["hafnia", "glencore", "alicorp"];
+const companies = ["hafniaLogo", "glencore", "alicorp", "hafnia", "nyk"];
