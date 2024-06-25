@@ -7,6 +7,10 @@ import WordRotate from "@/components/magicui/word-rotate";
 import NumberTicker from "@/components/magicui/number-ticker";
 import Marquee from "@/components/magicui/marquee";
 import TextReveal from "@/components/magicui/text-reveal";
+import Coverage from "@/components/Coverage";
+import Note from "@/components/Note";
+import Timeline from "@/components/Timeline";
+
 import { GlobeDemo } from "@/components/Globe3D";
 import { Footer } from "@/components/Footer";
 import { ThreeDCardDemo } from "@/components/CardDemo";
@@ -14,13 +18,9 @@ import { ThreeDCardDemoTwo } from "@/components/CardTwo";
 import { ThreeDCardDemoThree } from "@/components/CardThree";
 import { TeamCard } from "@/components/TeamCard";
 import { ContactForm } from "@/components/Form";
-import Coverage from "@/components/Coverage";
 
 import fs from "fs";
 import DottedMap from "dotted-map";
-
-import Note from "@/components/Note";
-import Timeline from "@/components/Timeline";
 
 const map = new DottedMap({
   height: 60,

@@ -3,6 +3,8 @@ import { Chivo } from "next/font/google";
 
 import { cn } from "@/lib/utils";
 
+import { Toaster } from "@/components/ui/sonner";
+
 import "./globals.css";
 
 const chivo = Chivo({ subsets: ["latin"] });
@@ -23,6 +25,7 @@ export default function RootLayout({
         className={cn("overflow-x-hidden h-screen flex-col", chivo.className)}
       >
         <main>{children}</main>
+        <Toaster />
       </body>
     </html>
   );

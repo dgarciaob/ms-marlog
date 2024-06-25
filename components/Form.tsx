@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import React, { useState } from "react";
 
 import * as z from "zod";
@@ -28,17 +30,17 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
-import Image from "next/image";
+import { createLead } from "@/actions/create-lead";
+import { businessLine } from "@prisma/client";
+import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 
 const contactFormSchema = z.object({
-  fName: z
-    .string()
-    .min(3, { message: "Your name must be at least 3 characters long" }),
-  lName: z
+  name: z
     .string()
     .min(3, { message: "Your name must be at least 3 characters long" }),
   company: z.string(),
-  businessLine: z.string(),
+  businessLine: z.nativeEnum(businessLine),
   phone: z
     .string()
     .min(9, { message: "Enter a valid phone number" })
@@ -52,14 +54,14 @@ const contactFormSchema = z.object({
 
 export const ContactForm = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
 
   const form = useForm<z.infer<typeof contactFormSchema>>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
-      fName: "",
-      lName: "",
+      name: "",
       company: "",
-      businessLine: "",
+      businessLine: "ShipBrokers",
       phone: "",
       email: "",
       message: "",
@@ -67,7 +69,15 @@ export const ContactForm = () => {
   });
 
   const onSubmit = (values: z.infer<typeof contactFormSchema>) => {
-    console.log(values);
+    try {
+      createLead(values);
+      toast.success("Your message has been sent successfully!");
+      router.refresh();
+    } catch (error) {
+      toast.error(
+        "We couldn't send your message, please refresh and try again."
+      );
+    }
   };
 
   return (
@@ -90,7 +100,7 @@ export const ContactForm = () => {
             >
               <FormField
                 control={form.control}
-                name="fName"
+                name="name"
                 render={({ field }) => {
                   return (
                     <FormItem>
