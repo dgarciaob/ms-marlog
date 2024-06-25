@@ -171,7 +171,10 @@ export const ContactForm = () => {
                         Business Line
                       </FormLabel>
                       <FormControl>
-                        <Select>
+                        <Select
+                          onValueChange={field.onChange}
+                          defaultValue={field.value}
+                        >
                           <SelectTrigger className="w-[180px]">
                             <SelectValue placeholder="Business Lines" />
                           </SelectTrigger>
