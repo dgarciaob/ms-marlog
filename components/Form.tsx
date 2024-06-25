@@ -176,13 +176,13 @@ export const ContactForm = () => {
                             <SelectValue placeholder="Business Lines" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="shipBrokers">
+                            <SelectItem value={businessLine.ShipBrokers}>
                               Ship Brokers
                             </SelectItem>
-                            <SelectItem value="shipAgents">
+                            <SelectItem value={businessLine.ShipAgents}>
                               Ship Agents
                             </SelectItem>
-                            <SelectItem value="logisticAgents">
+                            <SelectItem value={businessLine.LogisticAgents}>
                               Logistic Agents
                             </SelectItem>
                           </SelectContent>
