@@ -1,6 +1,5 @@
 "use server";
 
-import { businessLine } from "@prisma/client";
 import { db } from "@/lib/db";
 
 type CreateLeadProps = {
@@ -8,7 +7,7 @@ type CreateLeadProps = {
   email: string;
   phone: string;
   company: string;
-  businessLine: businessLine;
+  businessLine: string;
   message: string;
 };
 

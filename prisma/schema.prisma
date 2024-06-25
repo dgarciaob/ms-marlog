@@ -20,15 +20,9 @@ model Lead {
   email     String   
   phone     String
   company   String
-  businessLine businessLine
+  businessLine String
   message   String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
 
-// generate a type for businessLine, my business line is either Ship Brokers, Ship Agents or Logistic Agents
-enum businessLine {
-  ShipBrokers
-  ShipAgents
-  LogisticAgents
-}

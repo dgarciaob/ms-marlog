@@ -31,7 +31,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { createLead } from "@/actions/create-lead";
-import { businessLine } from "@prisma/client";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 
@@ -40,7 +39,7 @@ const contactFormSchema = z.object({
     .string()
     .min(3, { message: "Your name must be at least 3 characters long" }),
   company: z.string(),
-  businessLine: z.nativeEnum(businessLine),
+  businessLine: z.string(),
   phone: z
     .string()
     .min(9, { message: "Enter a valid phone number" })
@@ -61,7 +60,7 @@ export const ContactForm = () => {
     defaultValues: {
       name: "",
       company: "",
-      businessLine: "ShipBrokers",
+      businessLine: "",
       phone: "",
       email: "",
       message: "",
@@ -179,13 +178,13 @@ export const ContactForm = () => {
                             <SelectValue placeholder="Business Lines" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value={businessLine.ShipBrokers}>
+                            <SelectItem value={"Ship Brokers"}>
                               Ship Brokers
                             </SelectItem>
-                            <SelectItem value={businessLine.ShipAgents}>
+                            <SelectItem value={"Ship Agents"}>
                               Ship Agents
                             </SelectItem>
-                            <SelectItem value={businessLine.LogisticAgents}>
+                            <SelectItem value={"Logistic Agents"}>
                               Logistic Agents
                             </SelectItem>
                           </SelectContent>
