@@ -19,6 +19,7 @@ import {
   AccordionTrigger,
 } from "./ui/accordion";
 import { countryAccordions } from "@/lib/data";
+import { cn } from "@/lib/utils";
 
 const Coverage = () => {
   const [selectedCountry, setSelectedCountry] = useState<string | undefined>(
@@ -70,7 +71,17 @@ const Coverage = () => {
                   key={idx}
                 >
                   <AccordionItem value={`item-${idx}`}>
-                    <AccordionTrigger>{country.port}</AccordionTrigger>
+                    <AccordionTrigger>
+                      <div className="flex flex-row items-center ">
+                        {country.port}
+                        <div
+                          className="rounded-full h-3 w-3 ml-2"
+                          style={{
+                            backgroundColor: country.color,
+                          }}
+                        />
+                      </div>
+                    </AccordionTrigger>
                     <AccordionContent>{country.portContent}</AccordionContent>
                   </AccordionItem>
                 </Accordion>

@@ -58,10 +58,10 @@ const Navigation = () => {
           </Link>
         </div>
         <Sheet>
-          <SheetTrigger className="flex md:hidden">
+          <SheetTrigger className="flex lg:hidden">
             <Menu className="h-5 w-5 text-white" />
           </SheetTrigger>
-          <SheetContent className="flex flex-col">
+          <SheetContent className="flex flex-col space-y-4">
             <div className="flex lg:flex-1">
               <Link href="/" className="-m-1.5 p-1.5">
                 <span className="sr-only">Master Shipping</span>

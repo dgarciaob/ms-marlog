@@ -25,28 +25,83 @@ import DottedMap from "dotted-map";
 const map = new DottedMap({
   height: 60,
   grid: "diagonal",
-  countries: ["PAN"],
+  countries: ["PER"],
 });
 
 map.addPin({
-  lat: -4.5770783194849045,
-  lng: -81.27992381597724,
-  svgOptions: { color: "#d6ff79", radius: 0.4 },
+  lat: -4.580689470188558,
+  lng: -81.2628526268843,
+  svgOptions: { color: "#450A0A", radius: 0.4 },
 });
+
 map.addPin({
-  lat: 48.8534,
-  lng: 2.3488,
-  svgOptions: { color: "#1F1F1F", radius: 0.4 },
+  lat: -5.085538395866814,
+  lng: -81.10820931499524,
+  svgOptions: { color: "#7F1D1D", radius: 0.4 },
+});
+
+map.addPin({
+  lat: -5.793353209606286,
+  lng: -81.05780351737315,
+  svgOptions: { color: "#991B1B", radius: 0.4 },
+});
+
+map.addPin({
+  lat: -8.228413884093385,
+  lng: -78.98318601479916,
+  svgOptions: { color: "#B91C1C", radius: 0.4 },
+});
+
+map.addPin({
+  lat: -9.106584616147686,
+  lng: -78.56547758770549,
+  svgOptions: { color: "#DC2626", radius: 0.4 },
+});
+
+map.addPin({
+  lat: -7.691125790737827,
+  lng: -79.44258345486675,
+  svgOptions: { color: "#EF4444", radius: 0.4 },
+});
+
+map.addPin({
+  lat: -6.9266246107976635,
+  lng: -79.86469828893561,
+  svgOptions: { color: "#F87171", radius: 0.4 },
+});
+
+map.addPin({
+  lat: -10.6725368,
+  lng: -77.8186675,
+  svgOptions: { color: "#FCA5A5", radius: 0.4 },
+});
+
+map.addPin({
+  lat: -12.053776145190179,
+  lng: -77.14642630885282,
+  svgOptions: { color: "#FECACA", radius: 0.4 },
+});
+
+map.addPin({
+  lat: -12.250397867551575,
+  lng: -76.92251519874968,
+  svgOptions: { color: "#FEE2E2", radius: 0.4 },
+});
+
+map.addPin({
+  lat: -13.767387913793673,
+  lng: -76.23115351925324,
+  svgOptions: { color: "#FECDD3", radius: 0.4 },
 });
 
 const svgMap = map.getSVG({
   radius: 0.22,
-  color: "#1F1F1F",
+  color: "#999999",
   shape: "hexagon",
   backgroundColor: "#FFFFFF",
 });
 
-fs.writeFileSync("public/images/customMapPanama.svg", svgMap);
+fs.writeFileSync("public/images/customMapPeru.svg", svgMap);
 
 export default function Home() {
   return (
@@ -84,7 +139,7 @@ export default function Home() {
           What we specialize on
         </p>
       </div>
-      <section className="mx-auto max-w-7xl px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center">
+      <section className="mx-auto max-w-7xl px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 items-center">
         <ThreeDCardDemo />
         <ThreeDCardDemoTwo />
         <ThreeDCardDemoThree />
@@ -115,35 +170,6 @@ export default function Home() {
         </div>
 
         <div className="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3 mt-8 items-center mx-auto max-w-7xl">
-          {/* <div className="bg-[#FAFAFA] w-auto h-44 rounded-lg flex flex-col gap-y-2 items-center p-5 border border-muted">
-            <p className="text-xl text-slate-900 font-bold">
-              World-wide offices
-            </p>
-            <div className="flex flex-col space-y-1 text-sm mt-2">
-              <div className="flex flex-row items-center space-x-2">
-                <div className="flex flex-row items-center">
-                  <MapPinIcon size={24} className="text-[#3B82F6] mr-2" />
-                  <p>2011</p>
-                </div>
-                <span className="">Lima, Perú 🇵🇪</span>
-              </div>
-              <div className="flex flex-row items-center space-x-2">
-                <div className="flex flex-row items-center">
-                  <MapPinIcon size={24} className="text-[#3B82F6] mr-2" />
-                  <p>2019</p>
-                </div>
-                <span className="">Guayaquil, Ecuador 🇪🇨</span>
-              </div>
-              <div className="flex flex-row items-center space-x-2">
-                <div className="flex flex-row items-center">
-                  <MapPinIcon size={24} className="text-[#3B82F6] mr-2" />
-                  <p>2021</p>
-                </div>
-                <span className="">Atlanta, USA 🇺🇸</span>
-              </div>
-            </div>
-          </div> */}
-
           <div className="bg-[#FAFAFA] w-auto h-44 rounded-lg flex flex-row space-x-10 justify-start items-center px-8 border border-muted">
             <div className="rounded-lg h-24 w-24 bg-[#E0F2FE] flex items-center justify-center">
               <Anchor size={56} className="text-[#3B82F6]" />
@@ -215,10 +241,10 @@ export default function Home() {
       </div>
 
       <section
-        className="mx-auto max-w-7xl mb-28 px-8 flex flex-col md:flex-row items-center justify-center"
+        className="mx-auto max-w-7xl mb-0 mt-12 lg:mt-0 lg:mb-28 px-8 flex flex-col md:flex-row items-center justify-center"
         id="mainPorts"
       >
-        <div className="flex flex-col text-center md:justify-start md:text-left space-y-1">
+        <div className="flex flex-col text-center md:justify-start md:text-left space-y-1 mb-12 md:mb-0">
           <h2 className="text-4xl font-bold text-slate-900">
             International Coverage
           </h2>

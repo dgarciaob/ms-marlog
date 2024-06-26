@@ -401,22 +401,8 @@ export function GlobeDemo() {
   ];
 
   return (
-    <div className="flex flex-row items-center justify-center h-screen md:h-auto dark:bg-black bg-white relative w-full">
-      <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-[40rem] px-4">
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 20,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 1,
-          }}
-          className="div"
-        ></motion.div>
+    <div className="hidden md:flex items-center justify-center h-screen md:h-auto dark:bg-black bg-white relative w-full">
+      <div className="max-w-7xl mx-auto w-full relative overflow-hidden lg:h-[40rem] h-[18rem] px-4">
         <div className="absolute w-full h-72 md:h-full items-center z-10">
           <World data={sampleArcs} globeConfig={globeConfig} />;
         </div>
