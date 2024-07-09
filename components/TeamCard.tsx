@@ -1,6 +1,7 @@
 import { EnvelopeClosedIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
+import "@/components/css/TeamCard.css";
 
 type Props = {
   name: string;
@@ -30,7 +31,7 @@ export const TeamCard = ({
         alt="Profile Image"
         width={1000}
         height={1000}
-        className="w-full max-w-96 h-80 object-cover rounded-lg"
+        className="w-full max-w-96 h-80 object-contain rounded-lg team-img"
       />
 
       <div className="flex flex-col justify-between w-full h-full max-w-48">

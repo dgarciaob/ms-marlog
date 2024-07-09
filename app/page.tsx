@@ -19,90 +19,6 @@ import { ThreeDCardDemoThree } from "@/components/CardThree";
 import { TeamCard } from "@/components/TeamCard";
 import { ContactForm } from "@/components/Form";
 
-import fs from "fs";
-import DottedMap from "dotted-map";
-
-const map = new DottedMap({
-  height: 60,
-  grid: "diagonal",
-  countries: ["PER"],
-});
-
-map.addPin({
-  lat: -4.580689470188558,
-  lng: -81.2628526268843,
-  svgOptions: { color: "#450A0A", radius: 0.4 },
-});
-
-map.addPin({
-  lat: -5.085538395866814,
-  lng: -81.10820931499524,
-  svgOptions: { color: "#7F1D1D", radius: 0.4 },
-});
-
-map.addPin({
-  lat: -5.793353209606286,
-  lng: -81.05780351737315,
-  svgOptions: { color: "#991B1B", radius: 0.4 },
-});
-
-map.addPin({
-  lat: -8.228413884093385,
-  lng: -78.98318601479916,
-  svgOptions: { color: "#B91C1C", radius: 0.4 },
-});
-
-map.addPin({
-  lat: -9.106584616147686,
-  lng: -78.56547758770549,
-  svgOptions: { color: "#DC2626", radius: 0.4 },
-});
-
-map.addPin({
-  lat: -7.691125790737827,
-  lng: -79.44258345486675,
-  svgOptions: { color: "#EF4444", radius: 0.4 },
-});
-
-map.addPin({
-  lat: -6.9266246107976635,
-  lng: -79.86469828893561,
-  svgOptions: { color: "#F87171", radius: 0.4 },
-});
-
-map.addPin({
-  lat: -10.6725368,
-  lng: -77.8186675,
-  svgOptions: { color: "#FCA5A5", radius: 0.4 },
-});
-
-map.addPin({
-  lat: -12.053776145190179,
-  lng: -77.14642630885282,
-  svgOptions: { color: "#FECACA", radius: 0.4 },
-});
-
-map.addPin({
-  lat: -12.250397867551575,
-  lng: -76.92251519874968,
-  svgOptions: { color: "#FEE2E2", radius: 0.4 },
-});
-
-map.addPin({
-  lat: -13.767387913793673,
-  lng: -76.23115351925324,
-  svgOptions: { color: "#FECDD3", radius: 0.4 },
-});
-
-const svgMap = map.getSVG({
-  radius: 0.22,
-  color: "#999999",
-  shape: "hexagon",
-  backgroundColor: "#FFFFFF",
-});
-
-fs.writeFileSync("public/images/customMapPeru.svg", svgMap);
-
 export default function Home() {
   return (
     <main>
@@ -224,7 +140,7 @@ export default function Home() {
               <Image
                 key={idx}
                 src={`/logo/${logo}.png`}
-                className="h-12 w-28 dark:brightness-0 dark:invert"
+                className="h-12 w-28 dark:brightness-0 dark:invert object-contain"
                 alt={logo}
                 width={1000}
                 height={1000}
@@ -237,7 +153,7 @@ export default function Home() {
       </section>
 
       <div className="w-full">
-        <TextReveal text="Our direct coverage includes all the ports in Ecuador and Perú while our sub-agency network allows us to expand our services upto the rest of The Americas. Our direct coverage includes all the ports in Ecuador and Perú while our sub-agency network allows us to expand our services upto the rest of The Americas." />
+        <TextReveal text="Our direct coverage includes all the ports in Ecuador and Perú while our sub-agency network allows us to expand our services upto the rest of The Americas. We support and have attended more than 5,000 port calls, with presence in Panamá, Colombia and Chile." />
       </div>
 
       <section
@@ -277,7 +193,7 @@ export default function Home() {
           <TeamCard
             name="Maria A. Paz"
             role="LATAM Manager"
-            img="/images/profPic2.jpg"
+            img="/images/mapms.png"
             linkedin="https://www.linkedin.com/in/maria-alejandra-paz-076b28161/"
             mail="map@mastershipping.com.pe"
             body="Dear%20Maria%20Alejandra%20Paz%0A%0AI'm%20interested%20in"
@@ -297,7 +213,7 @@ export default function Home() {
           <TeamCard
             name="Kattina Perez Garatea"
             role="ADM/OPS Executive"
-            img="/images/profPic1.jpg"
+            img="/images/kattinams.png"
             linkedin="https://www.linkedin.com/in/kattinapérezgaratea/"
             mail="kpg@mastershipping.com.pe"
             body="Dear%20Kattina%20Perez%0A%0AI'm%20interested%20in"
@@ -316,4 +232,12 @@ export default function Home() {
   );
 }
 
-const companies = ["hafniaLogo", "glencore", "alicorp", "hafnia", "nyk"];
+const companies = [
+  "hafniaLogo",
+  "dsm",
+  "bp",
+  "freepoint",
+  "nyk",
+  "vitol",
+  "EDF",
+];

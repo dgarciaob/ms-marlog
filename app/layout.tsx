@@ -10,8 +10,8 @@ import "./globals.css";
 const chivo = Chivo({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Master Shipping | Ship Brokers & Agents",
-  description: "Ship Brokers & Agents for US and Latam",
+  title: "Master Shipping | Ship Brokers & Logistic Agents",
+  description: "Ship Brokers & Logistic Agents for US and Latam",
 };
 
 export default function RootLayout({

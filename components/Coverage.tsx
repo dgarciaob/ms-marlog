@@ -60,7 +60,7 @@ const Coverage = () => {
             className="w-full object-contain max-h-[32rem]"
           />
         )}
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col overflow-y-auto max-h-96">
           {countryAccordions.map((country, idx) => {
             if (country.country === selectedCountry) {
               return (
