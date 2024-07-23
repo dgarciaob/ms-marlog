@@ -36,8 +36,8 @@ export default function Home() {
             Master Shipping
           </h1>
           <p className="text-xl text-white md:text-xl text-center lg:text-left">
-            Leading your shipping solutions <br />
-            for US & Latam.
+            Your one stop shop for <br />
+            all your shipping needs.
           </p>
           <WordRotate
             className="text-lg lg:text-xl font-normal bg-black rounded-lg px-4 py-2 text-white dark:text-black"
@@ -128,6 +128,15 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        {/* <div className="mx-auto max-w-7xl mt-16">
+          <h2 className="text-base font-semibold text-slate-900 text-center">
+            3 most spoken languages within the Americas: <br />
+          </h2>
+          <p className="text-lg text-slate-400 text-center">
+            Spanish, Portuguese, English
+          </p>
+        </div> */}
       </section>
 
       <section className="mx-auto max-w-7xl mt-32 pt-32 mb-20 px-8">
@@ -160,12 +169,19 @@ export default function Home() {
         className="mx-auto max-w-7xl mb-0 mt-12 lg:mt-0 lg:mb-28 px-8 flex flex-col md:flex-row items-center justify-center"
         id="mainPorts"
       >
-        <div className="flex flex-col text-center md:justify-start md:text-left space-y-1 mb-12 md:mb-0">
+        <div className="flex flex-col text-center md:justify-start md:text-left mb-12 md:mb-0">
           <h2 className="text-4xl font-bold text-slate-900">
             International Coverage
           </h2>
-          <p className="text-xl text-[#999999] font-normal">Where we operate</p>
+          <p className="text-xl text-[#999999] font-normal mt-1">
+            Where we operate.
+          </p>
+          <p className="text-xl text-[#999999] font-normal mt-4 md:mt-8">
+            We support 3 most spoken languages in the Americas: Spanish,
+            Portuguese, English
+          </p>
         </div>
+
         <GlobeDemo />
       </section>
 
@@ -185,7 +201,7 @@ export default function Home() {
             role="President & CEO"
             img="/images/profPic1.jpg"
             linkedin="https://www.linkedin.com/in/jose-antonio-paz-zanabria-72654121/"
-            mail="jap@mastershipping.com.pe"
+            mail="jap@mastershipping.us"
             body="Dear%20Jose%20Paz%0A%0AI'm%20interested%20in"
             credentials="MBA, BSC, MERCHANT MARINE"
             joined="Joined industry in 1991"
@@ -195,7 +211,7 @@ export default function Home() {
             role="LATAM Manager"
             img="/images/mapms.png"
             linkedin="https://www.linkedin.com/in/maria-alejandra-paz-076b28161/"
-            mail="map@mastershipping.com.pe"
+            mail="map@mastershipping.us"
             body="Dear%20Maria%20Alejandra%20Paz%0A%0AI'm%20interested%20in"
             credentials="BSC, BUSINESS ADMINISTRATOR"
             joined="Joined industry in 2020"
@@ -205,7 +221,7 @@ export default function Home() {
             role="Marketing Executive"
             img="/images/profPic2.jpg"
             linkedin="https://www.linkedin.com/in/ana-lucía-paz-b3939b223/"
-            mail="accounts@mastershipping.com.pe"
+            mail="accounts@mastershipping.us"
             body="Dear%20Ana%20Lucia%20Paz%0A%0AI'm%20interested%20in"
             credentials="BSC, MARKETING"
             joined="Joined industry 2022"
@@ -215,7 +231,7 @@ export default function Home() {
             role="ADM/OPS Executive"
             img="/images/kattinams.png"
             linkedin="https://www.linkedin.com/in/kattinapérezgaratea/"
-            mail="kpg@mastershipping.com.pe"
+            mail="kpg@mastershipping.us"
             body="Dear%20Kattina%20Perez%0A%0AI'm%20interested%20in"
             credentials="BSC, ECONOMICS"
             joined="Joined industry in 2024"

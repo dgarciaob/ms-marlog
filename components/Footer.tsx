@@ -22,7 +22,7 @@ const footerNavs = [
         name: "Logistic Agents",
       },
       {
-        href: "mailto:map@mastershipping.com.pe?body=Dear%20Master%20Shipping%20Team%0A%0AI'm%20interested%20in",
+        href: "mailto:map@mastershipping.us?body=Dear%20Master%20Shipping%20Team%0A%0AI'm%20interested%20in",
         name: "Support",
       },
     ],
@@ -63,7 +63,7 @@ export function Footer() {
             <Link href="/" className="flex items-center gap-2">
               <Image
                 className="h-14 w-auto"
-                src="/logo/msLogo.svg"
+                src="/logo/msNewLogo.svg"
                 alt="Master Shipping Logo"
                 width={1000}
                 height={1000}
@@ -81,7 +81,7 @@ export function Footer() {
                   Contact Us for any enquires or support. We are here to help.
                 </p>
                 <Link
-                  href="#contact"
+                  href="https://wa.me/999769034"
                   className={cn(
                     buttonVariants({
                       size: "lg",
@@ -140,6 +140,13 @@ export function Footer() {
               Master Shipping
             </a>
             . All Rights Reserved.
+            <a
+              href="https://www.magnetperu.com/"
+              target="_blank"
+              className="font-lufgaBold ml-2"
+            >
+              Made by Magnet
+            </a>
           </span>
         </div>
       </div>
