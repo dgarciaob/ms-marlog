@@ -40,7 +40,7 @@ const Note = () => {
         </div>
         <div className="flex items-center justify-center lg:w-1/3 w-full">
           <Image
-            src={"/images/profPic1.jpg"}
+            src={"/images/ms-japfinal.jpg"}
             alt="Jose A. Paz"
             width={1000}
             height={1000}

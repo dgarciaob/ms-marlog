@@ -128,15 +128,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-        {/* <div className="mx-auto max-w-7xl mt-16">
-          <h2 className="text-base font-semibold text-slate-900 text-center">
-            3 most spoken languages within the Americas: <br />
-          </h2>
-          <p className="text-lg text-slate-400 text-center">
-            Spanish, Portuguese, English
-          </p>
-        </div> */}
       </section>
 
       <section className="mx-auto max-w-7xl mt-32 pt-32 mb-20 px-8">
@@ -199,7 +190,7 @@ export default function Home() {
           <TeamCard
             name="Jose A. Paz"
             role="President & CEO"
-            img="/images/profPic1.jpg"
+            img="/images/ms-japfinal.jpg"
             linkedin="https://www.linkedin.com/in/jose-antonio-paz-zanabria-72654121/"
             mail="jap@mastershipping.us"
             body="Dear%20Jose%20Paz%0A%0AI'm%20interested%20in"
@@ -209,7 +200,7 @@ export default function Home() {
           <TeamCard
             name="Maria A. Paz"
             role="LATAM Manager"
-            img="/images/mapms.png"
+            img="/images/ms-mapfinal.jpg"
             linkedin="https://www.linkedin.com/in/maria-alejandra-paz-076b28161/"
             mail="map@mastershipping.us"
             body="Dear%20Maria%20Alejandra%20Paz%0A%0AI'm%20interested%20in"
@@ -219,7 +210,7 @@ export default function Home() {
           <TeamCard
             name="Ana L. Paz"
             role="Marketing Executive"
-            img="/images/profPic2.jpg"
+            img="/images/ms-anafinal.jpg"
             linkedin="https://www.linkedin.com/in/ana-lucía-paz-b3939b223/"
             mail="accounts@mastershipping.us"
             body="Dear%20Ana%20Lucia%20Paz%0A%0AI'm%20interested%20in"
@@ -229,7 +220,7 @@ export default function Home() {
           <TeamCard
             name="Kattina Perez Garatea"
             role="ADM/OPS Executive"
-            img="/images/kattinams.png"
+            img="/images/ms-katfinal.jpg"
             linkedin="https://www.linkedin.com/in/kattinapérezgaratea/"
             mail="kpg@mastershipping.us"
             body="Dear%20Kattina%20Perez%0A%0AI'm%20interested%20in"
