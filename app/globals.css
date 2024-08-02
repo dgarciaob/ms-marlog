@@ -43,6 +43,33 @@ html {
   font-family: "LufgaMedium", sans-serif;
 }
 
+@font-face {
+  font-family: "AvantGarde";
+  src: url("/fonts/AVGARDD_2.TTF");
+}
+
+.font-avantGarde {
+  font-family: "AvantGarde", sans-serif;
+}
+
+@font-face {
+  font-family: "AvantGardeO";
+  src: url("/fonts/AVGARDDO_2.TTF");
+}
+
+.font-avantGardeO {
+  font-family: "AvantGardeO", sans-serif;
+}
+
+@font-face {
+  font-family: "Kabel";
+  src: url("/fonts/Kabel_Regular.ttf");
+}
+
+.font-kabel {
+  font-family: "Kabel", sans-serif;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

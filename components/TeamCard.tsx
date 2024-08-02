@@ -12,6 +12,7 @@ type Props = {
   body: string;
   credentials: string;
   joined: string;
+  languages: string[];
 };
 
 export const TeamCard = ({
@@ -23,6 +24,7 @@ export const TeamCard = ({
   body,
   credentials,
   joined,
+  languages,
 }: Props) => {
   return (
     <div className="flex flex-col space-y-4 lg:flex-row lg:space-y-0 lg:space-x-4 max-w-xl lg:h-80">
@@ -52,6 +54,12 @@ export const TeamCard = ({
             <Link href={`mailto:${mail}?body=${body}`}>
               <EnvelopeClosedIcon />
             </Link>
+          </div>
+
+          {/* linkedin and mail */}
+          <div className="flex flex-col space-y-1 mt-6">
+            <p className="text-sm text-[#999999]">Speaks</p>
+            <div className="flex flex-row space-x-3">{languages}</div>
           </div>
         </div>
         <div className="flex flex-col mt-12 lg:mt-0">

@@ -34,7 +34,7 @@ export function ThreeDCardDemoTwo() {
               </CardItem>
               <CardItem translateZ="20" className="w-full mt-4">
                 <Image
-                  src="/images/msShipAgents.png"
+                  src="/images/msremasteredtwo.jpg"
                   height="1000"
                   width="1000"
                   className="h-96 w-full object-cover rounded-xl group-hover/card:shadow-xl"
@@ -104,7 +104,7 @@ export function ThreeDCardDemoTwo() {
             </CardItem>
             <CardItem translateZ="20" className="w-full mt-4">
               <Image
-                src="/images/msShipAgents.png"
+                src="/images/msremasteredtwo.jpg"
                 height="1000"
                 width="1000"
                 className="h-96 w-full object-cover rounded-xl group-hover/card:shadow-xl"

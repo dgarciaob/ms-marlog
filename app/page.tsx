@@ -32,11 +32,11 @@ export default function Home() {
           className="w-screen h-[100vh] object-cover relative z-20"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center space-y-4 lg:items-start lg:mx-auto lg:max-w-7xl px-8 z-40">
-          <h1 className="text-4xl lg:text-6xl font-medium tracking-wider text-white md:text-6xl">
+          <h1 className="text-4xl lg:text-6xl font-medium tracking-wider text-white md:text-6xl font-avantGarde">
             Master Shipping
           </h1>
           <p className="text-xl text-white md:text-xl text-center lg:text-left">
-            Your one stop shop for <br />
+            Your one-stop-shop for <br />
             all your shipping needs.
           </p>
           <WordRotate
@@ -92,7 +92,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col">
               <p className="text-2xl text-slate-900 font-bold">
-                <NumberTicker value={5000} />
+                + <NumberTicker value={5000} />
               </p>
               <p className="font-medium text-[#999999] text-base">
                 port calls attended
@@ -132,7 +132,7 @@ export default function Home() {
 
       <section className="mx-auto max-w-7xl mt-32 pt-32 mb-20 px-8">
         <h2 className="text-2xl font-bold text-slate-900 text-center">
-          Trusted By
+          Trusted Worldwide
         </h2>
         <div className="relative mt-16">
           <Marquee className="max-w-full [--duration:15s]" pauseOnHover>
@@ -153,7 +153,7 @@ export default function Home() {
       </section>
 
       <div className="w-full">
-        <TextReveal text="Our direct coverage includes all the ports in Ecuador and Perú while our sub-agency network allows us to expand our services upto the rest of The Americas. We support and have attended more than 5,000 port calls, with presence in Panamá, Colombia and Chile." />
+        <TextReveal text="To make our unique service experience available outside of the boundaries of the Americas. We have proudly attended over 5,000 port calls on behalf of leading global companies." />
       </div>
 
       <section
@@ -196,6 +196,7 @@ export default function Home() {
             body="Dear%20Jose%20Paz%0A%0AI'm%20interested%20in"
             credentials="MBA, BSC, MERCHANT MARINE"
             joined="Joined industry in 1991"
+            languages={[" 🇪🇸 ", " 🇺🇸 ", " 🇧🇷 "]}
           />
           <TeamCard
             name="Maria A. Paz"
@@ -206,6 +207,7 @@ export default function Home() {
             body="Dear%20Maria%20Alejandra%20Paz%0A%0AI'm%20interested%20in"
             credentials="BSC, BUSINESS ADMINISTRATOR"
             joined="Joined industry in 2020"
+            languages={[" 🇪🇸 ", " 🇺🇸 ", " 🇧🇷 "]}
           />
           <TeamCard
             name="Ana L. Paz"
@@ -216,6 +218,7 @@ export default function Home() {
             body="Dear%20Ana%20Lucia%20Paz%0A%0AI'm%20interested%20in"
             credentials="BSC, MARKETING"
             joined="Joined industry 2022"
+            languages={[" 🇪🇸 ", " 🇺🇸 "]}
           />
           <TeamCard
             name="Kattina Perez Garatea"
@@ -226,6 +229,7 @@ export default function Home() {
             body="Dear%20Kattina%20Perez%0A%0AI'm%20interested%20in"
             credentials="BSC, ECONOMICS"
             joined="Joined industry in 2024"
+            languages={[" 🇪🇸 ", " 🇺🇸 "]}
           />
         </div>
       </section>

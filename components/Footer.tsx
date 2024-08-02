@@ -60,7 +60,7 @@ export function Footer() {
       <div className="w-full px-4">
         <div className="gap-4 p-4 py-16 sm:pb-16 md:flex md:justify-between mx-auto max-w-screen-xl">
           <div className="mb-12 flex flex-col gap-4">
-            <Link href="/" className="flex items-center gap-2">
+            <Link href="/" className="flex items-center gap-3">
               <Image
                 className="h-14 w-auto"
                 src="/logo/msNewLogo.svg"
@@ -68,15 +68,17 @@ export function Footer() {
                 width={1000}
                 height={1000}
               />
-              <span className="self-center whitespace-nowrap text-2xl font-semibold text-slate-50">
-                Master Shipping
-              </span>
+              <div className="flex flex-col space-y-2">
+                <span className="self-center whitespace-nowrap tracking-wide text-2xl font-semibold text-slate-50 font-avantGarde">
+                  Master Shipping
+                </span>
+                <p className="font-kabel text-slate-50 self-center text-sm">
+                  Ship Brokers & Agents
+                </p>
+              </div>
             </Link>
             <div className="max-w-sm text-slate-50">
               <div className="z-10 mt-4 flex w-full flex-col items-start text-left">
-                <h1 className="text-3xl font-bold lg:text-2xl">
-                  Ship Brokers & Agents
-                </h1>
                 <p className="mt-2">
                   Contact Us for any enquires or support. We are here to help.
                 </p>
