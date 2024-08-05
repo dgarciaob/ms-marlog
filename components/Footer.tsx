@@ -60,19 +60,19 @@ export function Footer() {
       <div className="w-full px-4">
         <div className="gap-4 p-4 py-16 sm:pb-16 md:flex md:justify-between mx-auto max-w-screen-xl">
           <div className="mb-12 flex flex-col gap-4">
-            <Link href="/" className="flex items-center gap-3">
+            <Link href="/" className="flex items-center gap-2">
               <Image
-                className="h-14 w-auto"
+                className="h-16 w-auto"
                 src="/logo/msNewLogo.svg"
                 alt="Master Shipping Logo"
                 width={1000}
                 height={1000}
               />
-              <div className="flex flex-col space-y-0.5 items-center">
+              <div className="flex flex-col space-y-0.2 items-center justify-center">
                 <span className="self-center whitespace-nowrap tracking-wide text-2xl font-semibold text-slate-50 font-avantGarde">
                   MASTER SHIPPING
                 </span>
-                <p className="font-kabel text-slate-50 self-center text-sm">
+                <p className="font-kabel text-slate-50 self-center text-base">
                   Ship Brokers & Agents
                 </p>
               </div>

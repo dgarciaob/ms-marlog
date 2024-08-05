@@ -12,7 +12,7 @@ const Navigation = () => {
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Master Shipping</span>
             <Image
-              className="h-8 w-auto"
+              className="h-14 w-auto"
               src="/logo/msNewLogo.svg"
               alt="Master Shipping Logo"
               width={1000}

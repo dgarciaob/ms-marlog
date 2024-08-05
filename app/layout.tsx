@@ -12,6 +12,22 @@ const chivo = Chivo({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Master Shipping | Ship Brokers & Logistic Agents",
   description: "Ship Brokers & Logistic Agents for US and Latam",
+  robots: {
+    follow: true,
+    index: true,
+  },
+  keywords: [
+    "ship brokers",
+    "logistic agents",
+    "shipping",
+    "ship",
+    "logistic",
+    "agents",
+    "master shipping",
+    "us",
+    "latam",
+  ],
+  creator: "Magnet Agency",
 };
 
 export default function RootLayout({

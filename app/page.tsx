@@ -135,7 +135,7 @@ export default function Home() {
           Trusted by
         </h2>
         <div className="relative mt-16">
-          <Marquee className="max-w-full [--duration:15s]" pauseOnHover>
+          <Marquee className="max-w-full [--duration:30s]" pauseOnHover>
             {companies.map((logo, idx) => (
               <Image
                 key={idx}
@@ -156,8 +156,6 @@ export default function Home() {
         <TextReveal text="Our direct coverage includes all the ports in Ecuador and Perú while our sub-agency network allows us to make our unique service experience available outside of the boundaries of the Americas. We have proudly attended over 5,000 port calls on behalf of leading global companies." />
       </div>
 
-      {/* Our direct coverage includes all the ports in Ecuador and Perú while our sub-agency network allows us to make our unique service experience available outside of the boundaries of the Americas. We have proudly attended over 5,000 port calls on behalf of leading global companies. */}
-      {/* to make our unique service experience available outside of the boundaries of the Americas. We have proudly attended over 5,000 port calls on behalf of leading global companies. */}
       <section
         className="mx-auto max-w-7xl mb-0 mt-12 lg:mt-0 lg:mb-28 px-8 flex flex-col md:flex-row items-center justify-center"
         id="mainPorts"
@@ -246,11 +244,31 @@ export default function Home() {
 }
 
 const companies = [
-  "hafniaLogo",
-  "dsm",
+  "trafigura",
   "bp",
+  "repsol",
+  "hafniaLogo",
+  "maersk",
+  "dsm",
   "freepoint",
+  "glencore",
   "nyk",
   "vitol",
   "EDF",
+  "kmt",
+  "pbf",
+  "pmi",
+  "valero",
+  "novum",
+  "george",
+  "unipec",
+  "womar",
+  "lukoil",
+  "mol",
+  "heidmar",
+  "ultratank",
+  "cape",
+  "navig8",
+  "ultratank",
+  "enterprises",
 ];
