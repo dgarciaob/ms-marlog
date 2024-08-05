@@ -139,7 +139,7 @@ export default function Home() {
             {companies.map((logo, idx) => (
               <Image
                 key={idx}
-                src={`/logo/${logo}.png`}
+                src={`/logo/${logo}.jpg`}
                 className="h-12 w-28 dark:brightness-0 dark:invert object-contain"
                 alt={logo}
                 width={1000}
