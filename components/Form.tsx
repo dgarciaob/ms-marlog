@@ -69,7 +69,7 @@ export const ContactForm = () => {
     },
   });
 
-  const onSubmit = (values: z.infer<typeof contactFormSchema>) => {
+  const onSubmit = async (values: z.infer<typeof contactFormSchema>) => {
     try {
       createLead(values);
       toast.success("Your message has been sent successfully!");
