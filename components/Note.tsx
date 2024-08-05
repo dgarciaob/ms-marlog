@@ -36,7 +36,9 @@ const Note = () => {
             ensure our support is adding real value to their business towards a
             permanent growing and long-lasting relationship.
           </p>
-          <p>Thanks for letting us show you a different service experience</p>
+          <p>
+            Thanks for letting us show you a real different service experience
+          </p>
         </div>
         <div className="flex items-center justify-center lg:w-1/3 w-full">
           <Image

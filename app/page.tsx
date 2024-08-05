@@ -33,7 +33,7 @@ export default function Home() {
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center space-y-4 lg:items-start lg:mx-auto lg:max-w-7xl px-8 z-40">
           <h1 className="text-4xl lg:text-6xl font-medium tracking-wider text-white md:text-6xl font-avantGarde">
-            Master Shipping
+            MASTER SHIPPING
           </h1>
           <p className="text-xl text-white md:text-xl text-center lg:text-left">
             Your one-stop-shop for <br />
@@ -52,7 +52,7 @@ export default function Home() {
           Our Business Lines
         </h2>
         <p className="text-lg text-[#999999] font-normal mx-auto max-w-7xl px-8 text-center md:text-left">
-          What we specialize on
+          What we specialize in
         </p>
       </div>
       <section className="mx-auto max-w-7xl px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 items-center">
@@ -77,7 +77,7 @@ export default function Home() {
             What we have achieved
           </h2>
           <p className="text-lg text-[#999999] font-normal">
-            Trusted by the industry worldwide
+            Trusted worldwide
           </p>
         </div>
 
@@ -132,7 +132,7 @@ export default function Home() {
 
       <section className="mx-auto max-w-7xl mt-32 pt-32 mb-20 px-8">
         <h2 className="text-2xl font-bold text-slate-900 text-center">
-          Trusted Worldwide
+          Trusted by
         </h2>
         <div className="relative mt-16">
           <Marquee className="max-w-full [--duration:15s]" pauseOnHover>
@@ -153,9 +153,11 @@ export default function Home() {
       </section>
 
       <div className="w-full">
-        <TextReveal text="To make our unique service experience available outside of the boundaries of the Americas. We have proudly attended over 5,000 port calls on behalf of leading global companies." />
+        <TextReveal text="Our direct coverage includes all the ports in Ecuador and Perú while our sub-agency network allows us to make our unique service experience available outside of the boundaries of the Americas. We have proudly attended over 5,000 port calls on behalf of leading global companies." />
       </div>
 
+      {/* Our direct coverage includes all the ports in Ecuador and Perú while our sub-agency network allows us to make our unique service experience available outside of the boundaries of the Americas. We have proudly attended over 5,000 port calls on behalf of leading global companies. */}
+      {/* to make our unique service experience available outside of the boundaries of the Americas. We have proudly attended over 5,000 port calls on behalf of leading global companies. */}
       <section
         className="mx-auto max-w-7xl mb-0 mt-12 lg:mt-0 lg:mb-28 px-8 flex flex-col md:flex-row items-center justify-center"
         id="mainPorts"
@@ -221,7 +223,7 @@ export default function Home() {
             languages={[" 🇪🇸 ", " 🇺🇸 "]}
           />
           <TeamCard
-            name="Kattina Perez Garatea"
+            name="Kattina Perez"
             role="ADM/OPS Executive"
             img="/images/ms-katfinal.jpg"
             linkedin="https://www.linkedin.com/in/kattinapérezgaratea/"

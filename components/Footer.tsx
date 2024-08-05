@@ -68,9 +68,9 @@ export function Footer() {
                 width={1000}
                 height={1000}
               />
-              <div className="flex flex-col space-y-2">
+              <div className="flex flex-col space-y-0.5 items-center">
                 <span className="self-center whitespace-nowrap tracking-wide text-2xl font-semibold text-slate-50 font-avantGarde">
-                  Master Shipping
+                  MASTER SHIPPING
                 </span>
                 <p className="font-kabel text-slate-50 self-center text-sm">
                   Ship Brokers & Agents
