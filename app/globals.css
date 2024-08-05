@@ -17,30 +17,12 @@ html {
 }
 
 @font-face {
-  font-family: "LufgaRegular";
-  src: url("/fonts/Lufga-Regular.otf");
-}
-
-.font-lufga {
-  font-family: "LufgaRegular", sans-serif;
-}
-
-@font-face {
   font-family: "LufgaBold";
   src: url("/fonts/Lufga-Bold.otf");
 }
 
 .font-lufgaBold {
   font-family: "LufgaBold", sans-serif;
-}
-
-@font-face {
-  font-family: "LufgaMedium";
-  src: url("/fonts/Lufga-Medium.otf");
-}
-
-.font-lufgaMedium {
-  font-family: "LufgaMedium", sans-serif;
 }
 
 @font-face {
