@@ -29,8 +29,8 @@ export function ThreeDCardDemo() {
                 translateZ="20"
                 className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300 text-left"
               >
-                Ship broking for bulk, break-bulk cargoes & containers. Review
-                of calculations
+                Ocean freight for bulk, break-bulk, and containers. Advisory &
+                demurrage mitigation.
               </CardItem>
               <CardItem translateZ="20" className="w-full mt-4">
                 <Image

@@ -27,7 +27,7 @@ export function ThreeDCardDemoTwo() {
               <CardItem
                 as="p"
                 translateZ="20"
-                className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300 text-left"
               >
                 We serve the industry attending any type of ship and crew
                 nationality with the highest standards.

@@ -29,8 +29,8 @@ export function ThreeDCardDemoThree() {
                 translateZ="20"
                 className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300 text-left"
               >
-                Isotanks & Flexitanks operations. Holistic approach to your
-                logistic needs.
+                Isotanks & Flexitanks experts. Your cargo is safe with us during
+                the entire logistic process.
               </CardItem>
               <CardItem translateZ="20" className="w-full mt-4">
                 <Image
