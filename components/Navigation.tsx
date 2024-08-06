@@ -67,7 +67,7 @@ const Navigation = () => {
                 <span className="sr-only">Master Shipping</span>
                 <Image
                   className="h-8 w-auto"
-                  src="/logo/msLogoBlue.svg"
+                  src="/logo/msNewLogoBlue.svg"
                   alt="Master Shipping Logo"
                   width={1000}
                   height={1000}
