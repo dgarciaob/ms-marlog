@@ -55,7 +55,7 @@ const contactFormSchema = z.object({
 
 export const ContactForm = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const router = useRouter();
+  // const router = useRouter();
 
   const form = useForm<z.infer<typeof contactFormSchema>>({
     resolver: zodResolver(contactFormSchema),
@@ -87,7 +87,7 @@ export const ContactForm = () => {
         process.env.NEXT_PUBLIC_EMAILJS_USER_ID ?? ""
       );
       toast.success("Your message has been sent successfully!");
-      router.refresh();
+      // router.refresh();
       form.reset();
     } catch (error) {
       console.log(error);
