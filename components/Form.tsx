@@ -34,7 +34,7 @@ import { toast } from "sonner";
 
 import { useRouter } from "next/navigation";
 
-import { createLead } from "@/actions/create-lead";
+import emailjs from "@emailjs/browser";
 
 const contactFormSchema = z.object({
   name: z
@@ -70,14 +70,32 @@ export const ContactForm = () => {
   });
 
   const onSubmit = async (values: z.infer<typeof contactFormSchema>) => {
+    setIsLoading(true);
     try {
-      createLead(values);
+      const templateParams = {
+        from_name: values.name,
+        from_email: values.email,
+        phone: values.phone,
+        company: values.company,
+        businessLine: values.businessLine,
+        message: values.message,
+      };
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? "",
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ?? "",
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID ?? ""
+      );
       toast.success("Your message has been sent successfully!");
       router.refresh();
+      form.reset();
     } catch (error) {
+      console.log(error);
       toast.error(
         "We couldn't send your message, please refresh and try again."
       );
+    } finally {
+      setIsLoading(false);
     }
   };
 
