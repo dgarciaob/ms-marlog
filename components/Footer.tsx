@@ -83,7 +83,7 @@ export function Footer() {
                   Contact Us for any enquires or support. We are here to help.
                 </p>
                 <Link
-                  href="https://wa.me/999769034"
+                  href="https://wa.me/+51999769034"
                   className={cn(
                     buttonVariants({
                       size: "lg",
