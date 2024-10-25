@@ -10,8 +10,16 @@ import "./globals.css";
 const chivo = Chivo({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Master Shipping | Ship Brokers & Logistic Agents",
-  description: "Ship Brokers & Logistic Agents for US and Latam",
+  title: "Master Shipping | Ship Brokers, Ship Agents, Logistic Agents",
+  description: "Global Bulk Liquid Transportation Experts",
+  openGraph: {
+    title: "Master Shipping | Ship Brokers, Ship Agents, Logistic Agents",
+    description: "Global Bulk Liquid Transportation Experts",
+    type: "website",
+    locale: "en_US",
+    url: "https://mastershipping.us",
+    images: ["https://mastershipping.us/logo/opg-ms.png"],
+  },
   robots: {
     follow: true,
     index: true,
@@ -25,7 +33,6 @@ export const metadata: Metadata = {
     "agents",
     "master shipping",
     "us",
-    "latam",
   ],
   creator: "Magnet Agency",
 };
