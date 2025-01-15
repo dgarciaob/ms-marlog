@@ -12,11 +12,16 @@ export function ThreeDCardDemoTwo() {
   const [open, setOpen] = useState(false);
   const isDesktop = useMediaQuery("(min-width: 768px)");
 
+  const handleMouseEnter = () => setOpen(true);
+
   if (isDesktop) {
     return (
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger>
-          <CardContainer className="inter-var max-w-96">
+          <CardContainer
+            className="inter-var max-w-96"
+            onMouseEnter={handleMouseEnter}
+          >
             <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
               <CardItem
                 translateZ="20"

@@ -18,10 +18,14 @@ export const CardContainer = ({
   children,
   className,
   containerClassName,
+  onMouseEnter,
+  onMouseLeave,
 }: {
   children?: React.ReactNode;
   className?: string;
   containerClassName?: string;
+  onMouseEnter?: React.MouseEventHandler<HTMLDivElement>;
+  onMouseLeave?: React.MouseEventHandler<HTMLDivElement>;
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isMouseEntered, setIsMouseEntered] = useState(false);
@@ -35,16 +39,28 @@ export const CardContainer = ({
     containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
   };
 
-  const handleMouseEnter = (e: React.MouseEvent<HTMLDivElement>) => {
+  // const handleMouseEnter = (e: React.MouseEvent<HTMLDivElement>) => {
+  //   setIsMouseEntered(true);
+  //   if (!containerRef.current) return;
+  // };
+
+  // const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
+  //   if (!containerRef.current) return;
+  //   setIsMouseEntered(false);
+  //   containerRef.current.style.transform = `rotateY(0deg) rotateX(0deg)`;
+  // };
+
+  const handleMouseEnterInternal = (e: React.MouseEvent<HTMLDivElement>) => {
     setIsMouseEntered(true);
-    if (!containerRef.current) return;
+    if (onMouseEnter) onMouseEnter(e);
   };
 
-  const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!containerRef.current) return;
+  const handleMouseLeaveInternal = (e: React.MouseEvent<HTMLDivElement>) => {
     setIsMouseEntered(false);
-    containerRef.current.style.transform = `rotateY(0deg) rotateX(0deg)`;
+    containerRef.current!.style.transform = `rotateY(0deg) rotateX(0deg)`;
+    if (onMouseLeave) onMouseLeave(e);
   };
+
   return (
     <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
       <div
@@ -58,9 +74,9 @@ export const CardContainer = ({
       >
         <div
           ref={containerRef}
-          onMouseEnter={handleMouseEnter}
+          onMouseEnter={handleMouseEnterInternal}
           onMouseMove={handleMouseMove}
-          onMouseLeave={handleMouseLeave}
+          onMouseLeave={handleMouseLeaveInternal}
           className={cn(
             "flex items-center justify-center relative transition-all duration-200 ease-linear",
             className
@@ -86,7 +102,7 @@ export const CardBody = ({
   return (
     <div
       className={cn(
-        "h-96 w-96 [transform-style:preserve-3d]  [&>*]:[transform-style:preserve-3d]",
+        "h-96 w-96 [transform-style:preserve-3d] [&>*]:[transform-style:preserve-3d]",
         className
       )}
     >
