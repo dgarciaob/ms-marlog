@@ -55,6 +55,9 @@ export default function Home() {
           What we specialize in
         </p>
       </div>
+      <p className="mx-auto max-w-7xl px-8 text-center md:text-left text-[#999999]">
+        Click each card to learn more
+      </p>
       <section className="mx-auto max-w-7xl px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 items-center">
         <ThreeDCardDemo />
         <ThreeDCardDemoTwo />
